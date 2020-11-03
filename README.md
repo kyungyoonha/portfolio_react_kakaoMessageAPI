@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ※ Personer Project [React + GoogleAPI + 카카오 알림톡]
 
-## Available Scripts
+### DESCRIPTION
 
-In the project directory, you can run:
+-   구글 설문지 신규 작성시 확인 신규 알림톡 발송
+-   구글 시트에 저장된 데이터로 확인 알림톡 발송 및 상태변경 기능
+-   처음 가입시, 이력서 등록 완료시 등 각상황에 맞는 알림톡 발송 가능
 
-### `yarn start`
+![img](./img/알림톡.gif)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### PROCEDURE:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+// [루트 디렉토리에 .env 파일]
+REACT_APP_VERIFIED_EMAIL = ['aaa@gmail.com']  // 관리자 구글 이메일
+REACT_APP_GOOGLE_APIKEY = <구글 API KEY>
+REACT_APP_GOOGLE_CLIENT_ID = <구글 ClientId KEY>
+// 1. 구글 콘솔에서 clientID 생성
+// 2. 구글시트 > 권한 추가 > clientId 추가 및 권한 부여
+REACT_APP_KAKAOSEND_AUTHORIZATION  = <알림톡 APIKEY> // 오렌지 메시지 사용
 
-### `yarn test`
+$ git clone https://github.com/kyungyoonha/portfolio_react_kakaoMessageAPI.git
+$ git install
+$ cd portfolio_react_kakaoMessageAPI
+$ npm start
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 구현 기능
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-   Social login (Google login)
+-   semantic-ui-react
+-   redux
+-   google Sheet API CRUD
+-   pagination
+-   modal

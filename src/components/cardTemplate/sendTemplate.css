@@ -1,0 +1,14 @@
+#kakao {
+    background-color: #fae100;
+}
+
+#sidecontent {
+    background-color: 'green';
+}
+div.sendContent {
+    height: 400px
+}
+
+form.ui.form > div.field {
+    margin: 0 0 7px 0;
+}
