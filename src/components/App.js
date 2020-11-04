@@ -14,6 +14,7 @@ import ModalSendOrder from './modalPage/ModalSendOrder';
 import history from '../history';
 
 const App = () => {
+    // 접근권한 체크
     const { verified } = useSelector(state => state.auth);
     const RouteIf = ({ auth, component: Component, ...rest}) => {
         return(
